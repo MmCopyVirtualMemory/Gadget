@@ -2,7 +2,7 @@
 **I hope to post some useful gadgets that I find here for the eager reverse engineering enthusiasts to utilize and take inspiration from. If you would like to contribute your own gadget(s), a PR is welcome.**
 
 # KsecDD Table Gadget(s):
-![image](https://user-images.githubusercontent.com/88007716/231932451-3cb2db3a-5826-4ca1-b219-3634fe899e2a.png)
+![image](https://user-images.githubusercontent.com/88007716/231940159-dc0ca94a-1789-4244-9b32-c66cc5ce6584.png)
 
 This gadget is pretty cool for a couple of reasons. Firstly, if you didn't already catch it from the disassembly, the gadget moves a table function pointer into rax and then via __guard_dispatch_icall_fptr, the function is called. Therefore by writing to this table we can jump to our code. Secondly, it's more complex than a simple jmp, mov->call, or mov->jmp gadget which means that it will bypass common gadget checks. In addition, this uses a table which means this is far from the only function that can be used.
 
