@@ -1,5 +1,5 @@
 # Gadgets
-**I hope to post some useful gadgets that I find here for the eager reverse enginners to use.**
+**I hope to post some useful gadgets that I find here for the eager reverse engineering enthusiasts to utilize.**
 
 # KsecDD Table Gadget(s):
 ![image](https://user-images.githubusercontent.com/88007716/231932451-3cb2db3a-5826-4ca1-b219-3634fe899e2a.png)
