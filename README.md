@@ -1,7 +1,7 @@
 # Gadgets
 I hope to post some useful gadgets that I find here for the eager reverse enginners to use.
 
-==========================================================================================================================================================================================
+=================================================
 KsecDD Table Gadget(s):
 ![image](https://user-images.githubusercontent.com/88007716/231932451-3cb2db3a-5826-4ca1-b219-3634fe899e2a.png)
 
@@ -25,4 +25,4 @@ driver_object->MajorFunction[IRP_MJ_DEVICE_CONTROL] = (PDRIVER_DISPATCH)(ksecdd 
 When I was debugging, I found that writing to the table directly caused a BSOD. To fix this, I copied to contents of the table and changed the table to point to my new replica table. This is fine because I am only modifying the table pointer which resides in the .data section.
 
 Finally the dispatch points to the gadget. When executed, the gadget grabs our handler from the table and calls it. Using a little bit of assembly, the stack is repaied and our hook is executed without the dispatch ever pointing outside of the proper section.
-==========================================================================================================================================================================================
+=================================================
