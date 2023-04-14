@@ -1,4 +1,4 @@
-# Gadgets
+# Gadget
 **I hope to post some useful gadgets that I find here for the eager reverse engineering enthusiasts to utilize.**
 
 # KsecDD Table Gadget(s):
