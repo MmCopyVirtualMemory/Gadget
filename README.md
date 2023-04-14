@@ -13,7 +13,8 @@ pop rax
 mov rax, HandlerFunction
 jmp rax
 ```
-Once the stack is repaired, we can handle execution appropriately. To show this, working, I chose to hook the IOCTL major irp from KsecDD. Here is a snippet of my code 
+Once the stack is repaired, we can handle execution appropriately. To show this, working, I chose to hook the IOCTL major irp from KsecDD. 
+Here is a snippet of my code:
 ```cpp
 static U64 dummy_table[512] = { 0 };
 memcpy(&dummy_table[0], (void*)function_table, sizeof(dummy_table));
