@@ -23,5 +23,5 @@ driver_object->MajorFunction[IRP_MJ_DEVICE_CONTROL] = (PDRIVER_DISPATCH)(ksecdd 
 ```
 When I was debugging, I found that writing to the table directly caused a BSOD (PG maybe?). To fix this, I copied to contents of the table and changed the table to point to my new replica table. This is fine because I am only modifying the table pointer which resides in the .data section.
 
-Finally the dispatch points to the gadget. When executed, the gadget grabs our handler from the table and calls it. Using a little bit of assembly, the stack is repaied and our hook is executed without the dispatch ever pointing outside of the proper section.
+Finally the dispatch points to the gadget. When executed, the gadget grabs our handler from the table and calls it. Using a little bit of assembly, the stack is repaired and our hook is executed without the dispatch ever pointing outside of the proper section.
 
